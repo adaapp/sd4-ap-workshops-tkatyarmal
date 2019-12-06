@@ -2,7 +2,7 @@ class Farmer {
     constructor(userName) {
         this.field = null
         this.userName = userName
-        this.image = loadImage('/images/farmer.png')
+        this.image = loadImage('./images/farmer.png')
         this.x = 100
         this.y = 100
         this.width = 60
@@ -37,6 +37,17 @@ class Farmer {
         if (keyCode == ENTER) {
             this.field.plant(this.x, this.y)
         }
+
+        if (keyCode == 65)  {   // a
+            this.field.releaseCow(this.x, this.y)
+        }
+
+        if (keyCode == 83)  {   //s
+            this.field.releaseSheep(this.x, this.y)
+        }
+
+
+
     }
 
     draw() {

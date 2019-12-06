@@ -7,6 +7,7 @@ class Field {
         this.width = width
         this.height = height
         this.crops = []
+        this.animals = []
     }
 
     draw() {
@@ -15,7 +16,15 @@ class Field {
         fill('#b58969')
         rect(this.x, this.y, this.width, this.height, 10)
         for (var crop of this.crops) {
-            crop.draw()
+            
+            if (crop != null)   {
+                crop.draw()
+            }
+            
+        }
+
+        for (var animal of this.animals) {
+            animal.draw()
         }
     }
 
@@ -26,6 +35,20 @@ class Field {
         // Add a new crop to the field's list of crops
         this.crops.push(new Crop(cropName[0], this, x, y))
     }
+
+    releaseCow(x,y)    {
+        console.log('release cow')
+        this.animals.push(new Cow(this, x, y))
+    }   
+
+    releaseSheep(x,y)    {
+        console.log('release sheep')
+        this.animals.push(new Sheep(this, x, y))
+    }
+
+
+
+
 
     containsPoint(x, y) {
         var top = this.y

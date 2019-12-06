@@ -12,6 +12,7 @@ function setup() {
     farmer = new Farmer(username)
     farmer.speak('Ey oh ey oh ey oh')
 
+
     fields.push(
         new Field('Wheat field', 10, 25, 75, 350, 175)
     )

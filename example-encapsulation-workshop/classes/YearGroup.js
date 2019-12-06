@@ -1,4 +1,8 @@
 class YearGroup {
+    
+
+    var example1 = 0
+    
     constructor(year, headOfYear) {
         
         // This is how you create private attributes (ES6 syntax)
@@ -16,6 +20,30 @@ class YearGroup {
         }
 
     }
+
+
 }
+
+
+class qwerty extends YearGroup   {
+
+    constructor()   {
+
+
+    }
+
+
+}
+
+
+
+
+class anyClass  {
+
+    var hello = 0
+}
+
+
+
 
 module.exports = YearGroup
